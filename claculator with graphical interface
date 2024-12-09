@@ -1,10 +1,10 @@
 #8/12/2024
 #المالك: ايهم حسن دندن
 import tkinter as tk
-from math import sqrt, sin, cos, tan, radians, degrees, log, exp
+from math import sqrt,radians, degrees, log, exp
 
 root = tk.Tk()
-root.title("آلة حاسبة ")
+root.title("calculator")
 
 entry = tk.Entry(root, width=40, borderwidth=5)
 entry.grid(row=0, column=0, columnspan=5)
@@ -21,7 +21,7 @@ def calculate():
         entry.insert(0, str(result))
     except:
         entry.delete(0, tk.END)
-        entry.insert(0, "خطأ")
+        entry.insert(0, "error")
 
 def clear():
     entry.delete(0, tk.END)
@@ -33,7 +33,7 @@ def sqrt_func():
         entry.insert(0, str(result))
     except:
         entry.delete(0, tk.END)
-        entry.insert(0, "خطأ")
+        entry.insert(0, "error")
 
 def power_func():
     current = entry.get()
@@ -47,7 +47,7 @@ def log_func():
         entry.insert(0, str(result))
     except:
         entry.delete(0, tk.END)
-        entry.insert(0, "خطأ")
+        entry.insert(0, "error")
 
 def exp_func():
     try:
@@ -56,7 +56,7 @@ def exp_func():
         entry.insert(0, str(result))
     except:
         entry.delete(0, tk.END)
-        entry.insert(0, "خطأ")
+        entry.insert(0, "error")
 
 buttons = [
     ('7', 1, 0), ('8', 1, 1), ('9', 1, 2), ('/', 1, 3), ('C', 1, 4),
